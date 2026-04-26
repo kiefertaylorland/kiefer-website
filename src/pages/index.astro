@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const base = '/kiefer-website';
 ---
 
 <BaseLayout title="Kiefer Taylor Land — Software Tester & Cybersecurity Professional">
@@ -18,8 +20,8 @@ import Footer from '../components/Footer.astro';
         and breaking things.
       </p>
       <p>
-        <a href="/blog/" style="margin-right: 1rem;">Read the Blog →</a>
-        <a href="/about/">Learn About Me →</a>
+        <a href={`${base}/blog/`} style="margin-right: 1rem;">Read the Blog →</a>
+        <a href={`${base}/about/`}>Learn About Me →</a>
       </p>
     </div>
   </main>

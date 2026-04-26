@@ -1,14 +1,15 @@
 ---
+const base = '/kiefer-website';
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/blog/', label: 'Blog' },
-  { href: '/about/', label: 'About' },
+  { href: `${base}/`, label: 'Home' },
+  { href: `${base}/blog/`, label: 'Blog' },
+  { href: `${base}/about/`, label: 'About' },
 ];
 ---
 
 <header class="header">
   <div class="header-inner">
-    <a href="/" class="site-title">Kiefer.dev</a>
+    <a href={`${base}/`} class="site-title">Kiefer.dev</a>
     <nav class="nav">
       {navLinks.map((link) => (
         <a href={link.href}>{link.label}</a>
