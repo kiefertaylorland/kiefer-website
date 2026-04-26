@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  date: Date;
+  description: string;
+  href: string;
+}
+
+const { title, date, description, href } = Astro.props;
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<article>
+  <a href={href} style="display: block; text-decoration: none;">
+    <h3 style="margin-bottom: 0.25rem;">{title}</h3>
+  </a>
+  <time style="color: var(--color-text-muted); font-size: 0.875rem;" datetime={date.toISOString()}>
+    {formattedDate}
+  </time>
+  <p style="margin-top: 0.5rem;">{description}</p>
+</article>

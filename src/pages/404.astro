@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="404 — Page Not Found">
+  <Header />
+  <main class="text-center mt-lg">
+    <h1 style="font-size: 4rem; margin-bottom: 0.5rem;">404</h1>
+    <p style="font-size: 1.25rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+      This page doesn't exist.
+    </p>
+    <a href="/" style="font-size: 1.1rem;">← Back to Home</a>
+  </main>
+  <Footer />
+</BaseLayout>

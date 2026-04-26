@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const siteUrl = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
+const canonical = siteUrl.toString();
+const defaultDescription = "Kiefer Taylor Land — Software Tester, Cybersecurity Professional, Musician";
+const desc = description || defaultDescription;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={desc} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+
+    <title>{title} | Kiefer.dev</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

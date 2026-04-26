@@ -1,0 +1,18 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/about/', label: 'About' },
+];
+---
+
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="site-title">Kiefer.dev</a>
+    <nav class="nav">
+      {navLinks.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

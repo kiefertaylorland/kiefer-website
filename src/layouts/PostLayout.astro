@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  date: Date;
+  description: string;
+}
+
+const { title, date, description } = Astro.props;
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main>
+    <article>
+      <header style="margin-bottom: 2rem;">
+        <h1>{title}</h1>
+        <time style="color: var(--color-text-muted);" datetime={date.toISOString()}>
+          {formattedDate}
+        </time>
+      </header>
+      <slot />
+    </article>
+    <p style="margin-top: 2rem;">
+      <a href="/blog/">← Back to Blog</a>
+    </p>
+  </main>
+  <Footer />
+</BaseLayout>
