@@ -1,6 +1,4 @@
 ---
-const base = '/kiefer-website';
-
 interface Props {
   title: string;
   date: Date;
@@ -17,7 +15,7 @@ const formattedDate = date.toLocaleDateString('en-US', {
 ---
 
 <article>
-  <a href={`${base}/blog/${slug}/`} style="display: block; text-decoration: none;">
+  <a href={`/blog/${slug}/`} style="display: block; text-decoration: none;">
     <h3 style="margin-bottom: 0.25rem;">{title}</h3>
   </a>
   <time style="color: var(--color-text-muted); font-size: 0.875rem;" datetime={date.toISOString()}>
