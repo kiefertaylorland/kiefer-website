@@ -4,8 +4,19 @@
   --color-text: #1a1a2e;
   --color-text-muted: #6b7280;
   --color-heading: #0f0f1a;
-  --color-link: #2563eb;
-  --color-link-hover: #1d4ed8;
+
+  /* Red / Blue / Purple — Security Team Colors */
+  --color-red:    #ef4444;
+  --color-red-dim:  #dc2626;
+  --color-blue:   #3b82f6;
+  --color-blue-dim: #2563eb;
+  --color-purple: #8b5cf6;
+  --color-purple-dim: #7c3aed;
+
+  /* Primary accent = purple (the convergence of red + blue) */
+  --color-accent: var(--color-purple);
+  --color-accent-hover: var(--color-purple-dim);
+
   --color-border: #e5e7eb;
   --color-code-bg: #f3f4f6;
   --color-card-bg: #f9fafb;
@@ -32,8 +43,12 @@
     --color-text: #d1d5db;
     --color-text-muted: #9ca3af;
     --color-heading: #f9fafb;
-    --color-link: #60a5fa;
-    --color-link-hover: #93c5fd;
+    --color-red:    #f87171;
+    --color-red-dim:  #ef4444;
+    --color-blue:   #60a5fa;
+    --color-blue-dim: #3b82f6;
+    --color-purple: #a78bfa;
+    --color-purple-dim: #8b5cf6;
     --color-border: #1f2937;
     --color-code-bg: #1f2937;
     --color-card-bg: #1a1a2e;
@@ -47,8 +62,12 @@ html.dark {
   --color-text: #d1d5db;
   --color-text-muted: #9ca3af;
   --color-heading: #f9fafb;
-  --color-link: #60a5fa;
-  --color-link-hover: #93c5fd;
+  --color-red:    #f87171;
+  --color-red-dim:  #ef4444;
+  --color-blue:   #60a5fa;
+  --color-blue-dim: #3b82f6;
+  --color-purple: #a78bfa;
+  --color-purple-dim: #8b5cf6;
   --color-border: #1f2937;
   --color-code-bg: #1f2937;
   --color-card-bg: #1a1a2e;
@@ -106,13 +125,13 @@ p {
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-blue);
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 a:hover {
-  color: var(--color-link-hover);
+  color: var(--color-blue-dim);
   text-decoration: underline;
 }
 
@@ -220,6 +239,10 @@ pre code {
   letter-spacing: -0.025em;
   line-height: 1.1;
   margin-bottom: var(--spacing-sm);
+  background: linear-gradient(135deg, var(--color-red), var(--color-purple), var(--color-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-subtitle {
@@ -257,23 +280,23 @@ pre code {
 }
 
 .btn-primary {
-  background: var(--color-link);
+  background: linear-gradient(135deg, var(--color-purple), var(--color-blue));
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background: var(--color-link-hover);
+  background: linear-gradient(135deg, var(--color-purple-dim), var(--color-blue-dim));
   text-decoration: none;
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--color-link);
-  border: 2px solid var(--color-link);
+  color: var(--color-purple);
+  border: 2px solid var(--color-purple);
 }
 
 .btn-secondary:hover {
-  background: var(--color-link);
+  background: var(--color-purple);
   color: #ffffff;
   text-decoration: none;
 }
