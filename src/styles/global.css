@@ -301,6 +301,68 @@ pre code {
   text-decoration: none;
 }
 
+/* === Contact Page === */
+.contact-page {
+  text-align: center;
+}
+
+.contact-page h1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-intro {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-card-bg);
+  transition: all 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-card:hover {
+  border-color: var(--color-purple);
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.15);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.contact-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.contact-handle {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  margin-left: auto;
+}
+
 /* === Responsive === */
 @media (max-width: 640px) {
   html { font-size: 16px; }
