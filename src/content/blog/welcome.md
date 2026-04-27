@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Kiefer.dev"
+title: "Welcome to Kiefer Taylor Land"
 date: "2026-04-26"
 description: "First post on my personal site — a little about what this site is for and what's coming."
 tags:
