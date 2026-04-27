@@ -174,18 +174,6 @@ pre code {
   align-items: center;
 }
 
-.site-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  text-decoration: none;
-}
-
-.site-title:hover {
-  text-decoration: none;
-  color: var(--color-heading);
-}
-
 .nav {
   display: flex;
   gap: var(--spacing-lg);
