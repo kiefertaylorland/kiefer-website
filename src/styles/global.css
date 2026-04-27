@@ -27,7 +27,7 @@
 
 /* === Dark Mode === */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light) {
     --color-bg: #0f0f1a;
     --color-text: #d1d5db;
     --color-text-muted: #9ca3af;
@@ -40,6 +40,20 @@
     --color-header-bg: #0f0f1a;
     --color-footer-bg: #1a1a2e;
   }
+}
+
+html.dark {
+  --color-bg: #0f0f1a;
+  --color-text: #d1d5db;
+  --color-text-muted: #9ca3af;
+  --color-heading: #f9fafb;
+  --color-link: #60a5fa;
+  --color-link-hover: #93c5fd;
+  --color-border: #1f2937;
+  --color-code-bg: #1f2937;
+  --color-card-bg: #1a1a2e;
+  --color-header-bg: #0f0f1a;
+  --color-footer-bg: #1a1a2e;
 }
 
 /* === Reset & Base === */
