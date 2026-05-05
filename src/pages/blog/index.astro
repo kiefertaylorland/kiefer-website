@@ -17,14 +17,20 @@ const postsWithSlug = posts.map((post) => ({
 
 <BaseLayout title="Blog — Kiefer Taylor Land" description="Thoughts on software testing, cybersecurity, AI/LLM security, music, and tech.">
   <Header />
-  <main>
-    <h1>Blog</h1>
+  <main id="content" class="page-main">
+    <header class="page-header">
+      <p class="page-kicker">Field Notes</p>
+      <h1>Blog</h1>
+      <p class="page-description">
+        Thoughts on software testing, cybersecurity, AI/LLM security, music, and tech.
+      </p>
+    </header>
     {posts.length === 0 ? (
-      <p style="color: var(--color-text-muted); margin-top: 2rem;">
+      <p class="empty-state">
         No posts yet. Stay tuned — something's coming.
       </p>
     ) : (
-      <div style="display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem;">
+      <div class="post-list">
         {postsWithSlug.map((post) => (
           <PostCard
             title={post.data.title}

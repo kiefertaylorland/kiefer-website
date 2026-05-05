@@ -6,54 +6,60 @@ import Footer from '../components/Footer.astro';
 
 <BaseLayout title="About — Kiefer Taylor Land" description="Learn about Kiefer Taylor Land — from military family roots in Japan to music, cybersecurity, and software testing.">
   <Header />
-  <main>
-    <h1>About Me</h1>
+  <main id="content" class="page-main">
+    <article class="content-panel prose">
+      <header class="page-header">
+        <p class="page-kicker">About</p>
+        <h1>About Me</h1>
+      </header>
 
-    <p>
-      I'm Kiefer Taylor Land — a software tester, cybersecurity professional, and lifelong 
-      tech enthusiast based in the Pacific Northwest (currently Redmond, WA, heading back to 
-      San Diego soon).
-    </p>
+      <p>
+        I'm Kiefer Taylor Land — a software tester, cybersecurity professional, and lifelong 
+        tech enthusiast based in the Pacific Northwest (currently Redmond, WA, heading back to 
+        San Diego soon).
+      </p>
 
-    <h2>Early Life</h2>
-    <p>
-      Born at Yokosuka Naval Hospital in Japan in 1989 to prior military parents, I grew up 
-      moving around a lot. The most formative years were ages 9–13 when we lived in Japan 
-      again — those core memories and my love for Japanese culture have stayed with me ever 
-      since. Japan holds a special place in my heart.
-    </p>
+      <h2>Early Life</h2>
+      <p>
+        Born at Yokosuka Naval Hospital in Japan in 1989 to prior military parents, I grew up 
+        moving around a lot. The most formative years were ages 9–13 when we lived in Japan 
+        again — those core memories and my love for Japanese culture have stayed with me ever 
+        since. Japan holds a special place in my heart.
+      </p>
 
-    <h2>Music</h2>
-    <p>
-      I picked up guitar at 13 and never put it down. Played in various bands throughout high 
-      school and beyond. That love for music sparked an interest in production and audio 
-      engineering — I started DJing and producing on my laptop, and eventually attended the 
-      LA Recording School in Hollywood, graduating with an AS in Recording Arts in December 2012.
-    </p>
+      <h2>Music</h2>
+      <p>
+        I picked up guitar at 13 and never put it down. Played in various bands throughout high 
+        school and beyond. That love for music sparked an interest in production and audio 
+        engineering — I started DJing and producing on my laptop, and eventually attended the 
+        LA Recording School in Hollywood, graduating with an AS in Recording Arts in December 2012.
+      </p>
 
-    <h2>Tech Career</h2>
-    <p>
-      I've always been drawn to technology. My earliest memories are playing the original Game 
-      Boy and Super Nintendo, followed by Sega Genesis, N64, and PlayStation 1 & 2.
-    </p>
-    <p>
-      My professional tech journey started in 2021 when I moved to San Diego and began on an 
-      IT help desk. From there I worked my way up to sysadmin, went back to school for a 
-      Bachelor's and Master's in Cybersecurity & Information Assurance, and transitioned into 
-      software testing in 2023 — which is where I am today.
-    </p>
+      <h2>Tech Career</h2>
+      <p>
+        I've always been drawn to technology. My earliest memories are playing the original Game 
+        Boy and Super Nintendo, followed by Sega Genesis, N64, and PlayStation 1 & 2.
+      </p>
+      <p>
+        My professional tech journey started in 2021 when I moved to San Diego and began on an 
+        IT help desk. From there I worked my way up to sysadmin, went back to school for a 
+        Bachelor's and Master's in Cybersecurity & Information Assurance, and transitioned into 
+        software testing in 2023 — which is where I am today.
+      </p>
 
-    <h2>What I'm Building Toward</h2>
-    <p>
-      My goal is to sell services for testing AI/LLM behavior and security, leveraging my 
-      cybersecurity background and software testing experience. Long term, I want to build 
-      products in this space. The intersection of AI security and quality assurance is where 
-      I believe I can make a real impact.
-    </p>
+      <h2>What I'm Building Toward</h2>
+      <p>
+        My goal is to sell services for testing AI/LLM behavior and security, leveraging my 
+        cybersecurity background and software testing experience. Long term, I want to build 
+        products in this space. The intersection of AI security and quality assurance is where 
+        I believe I can make a real impact.
+      </p>
 
-    <p style="margin-top: 2rem;">
-      <a href="/">← Back to Home</a> · <a href="/blog/">Read the Blog</a>
-    </p>
+      <nav class="link-row" aria-label="About page links">
+        <a href="/" class="back-link">Back to Home</a>
+        <a href="/blog/" class="back-link">Read the Blog</a>
+      </nav>
+    </article>
   </main>
   <Footer />
 </BaseLayout>

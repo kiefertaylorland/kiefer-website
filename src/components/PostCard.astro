@@ -14,12 +14,11 @@ const formattedDate = date.toLocaleDateString('en-US', {
 });
 ---
 
-<article>
-  <a href={`/blog/${slug}/`} style="display: block; text-decoration: none;">
-    <h3 style="margin-bottom: 0.25rem;">{title}</h3>
+<article class="post-card">
+  <a href={`/blog/${slug}/`} class="post-card-link">
+    <h3>{title}</h3>
+    <time datetime={date.toISOString()}>{formattedDate}</time>
+    <p>{description}</p>
+    <span class="post-card-cta" aria-hidden="true">Read post</span>
   </a>
-  <time style="color: var(--color-text-muted); font-size: 0.875rem;" datetime={date.toISOString()}>
-    {formattedDate}
-  </time>
-  <p style="margin-top: 0.5rem;">{description}</p>
 </article>

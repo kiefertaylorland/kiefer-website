@@ -19,19 +19,18 @@ const formattedDate = date.toLocaleDateString('en-US', {
 
 <BaseLayout title={title} description={description}>
   <Header />
-  <main>
-    <article>
-      <header style="margin-bottom: 2rem;">
+  <main id="content" class="page-main">
+    <article class="content-panel post-article prose">
+      <header class="post-header">
+        <p class="page-kicker">Blog</p>
         <h1>{title}</h1>
-        <time style="color: var(--color-text-muted);" datetime={date.toISOString()}>
+        <time class="post-meta" datetime={date.toISOString()}>
           {formattedDate}
         </time>
       </header>
       <slot />
     </article>
-    <p style="margin-top: 2rem;">
-      <a href="/blog/">← Back to Blog</a>
-    </p>
+    <a href="/blog/" class="back-link">Back to Blog</a>
   </main>
   <Footer />
 </BaseLayout>

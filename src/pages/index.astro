@@ -6,21 +6,29 @@ import Footer from '../components/Footer.astro';
 
 <BaseLayout title="Kiefer Taylor Land — Software Tester & Cybersecurity Professional">
   <Header />
-  <main>
-    <div class="hero">
-      <h1 class="hero-title">Kiefer Taylor Land</h1>
-      <p class="hero-subtitle">
-        Software Tester · Cybersecurity Professional · Musician
-      </p>
-      <p class="hero-bio">
-        I test AI and software systems for a living, play guitar for fun, and believe
-        the best code is the code you don't write. Currently exploring AI/LLM security, and building and breaking things that matter.
-      </p>
-      <div class="hero-links">
-        <a href="/blog/" class="btn btn-primary">Read the Blog →</a>
-        <a href="/about/" class="btn btn-secondary">Learn About Me →</a>
+  <main id="content" class="home-main">
+    <section class="hero" aria-labelledby="home-title">
+      <div class="hero-content">
+        <p class="page-kicker">Purple Team Mindset</p>
+        <h1 id="home-title" class="hero-title">Kiefer Taylor Land</h1>
+        <p class="hero-subtitle">
+          Software Tester · Cybersecurity Professional · Musician
+        </p>
+        <p class="hero-bio">
+          I test AI and software systems for a living, play guitar for fun, and believe
+          the best code is the code you don't write. Currently exploring AI/LLM security, and building and breaking things that matter.
+        </p>
       </div>
-    </div>
+      <div class="hero-links">
+        <a href="/blog/" class="btn btn-primary">Read the Blog</a>
+        <a href="/about/" class="btn btn-secondary">Learn About Me</a>
+      </div>
+      <div class="pill-row" aria-label="Areas of focus">
+        <span class="pill pill-purple">AI/LLM Security</span>
+        <span class="pill pill-blue">Software Testing</span>
+        <span class="pill pill-red">Building and Breaking</span>
+      </div>
+    </section>
   </main>
   <Footer />
 </BaseLayout>

@@ -28,9 +28,25 @@ const desc = description || defaultDescription;
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
 
+    <script is:inline>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const useDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+          document.documentElement.classList.toggle('dark', useDark);
+          document.documentElement.classList.toggle('light', !useDark);
+          document.documentElement.style.colorScheme = useDark ? 'dark' : 'light';
+        } catch {
+          /* Theme preference is progressive enhancement. */
+        }
+      })();
+    </script>
+
     <title>{title}</title>
   </head>
   <body>
+    <a href="#content" class="skip-link">Skip to content</a>
     <slot />
   </body>
 </html>
