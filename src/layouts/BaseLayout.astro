@@ -30,16 +30,18 @@ const desc = description || defaultDescription;
 
     <script is:inline>
       (() => {
+        let useDark = true;
+
         try {
           const savedTheme = localStorage.getItem('theme');
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const useDark = savedTheme ? savedTheme === 'dark' : prefersDark;
-          document.documentElement.classList.toggle('dark', useDark);
-          document.documentElement.classList.toggle('light', !useDark);
-          document.documentElement.style.colorScheme = useDark ? 'dark' : 'light';
+          useDark = savedTheme ? savedTheme === 'dark' : true;
         } catch {
           /* Theme preference is progressive enhancement. */
         }
+
+        document.documentElement.classList.toggle('dark', useDark);
+        document.documentElement.classList.toggle('light', !useDark);
+        document.documentElement.style.colorScheme = useDark ? 'dark' : 'light';
       })();
     </script>
 

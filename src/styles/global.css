@@ -123,7 +123,8 @@
   }
 }
 
-html.dark {
+html.dark,
+html:not(.light) {
   color-scheme: dark;
 
   --color-bg: #0b0c12;
